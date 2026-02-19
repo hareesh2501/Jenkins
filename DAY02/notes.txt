@@ -136,4 +136,12 @@ step 2: goto post build actions ---> deploy war/ear container
       
         Containers --> add containers --> tomcat 9 --> URL , add credentials
 
-step 3: build now
+step 3: build now it will fail
+Step 4: update tomcat-user.xml file ending with [gui,manager-script]
+
+/opt/apache-tomcat-9.0.115/conf/ vi tomcat-user.xml
+
+ <user username="kk" password="password" roles="manager-gui,admin-gui"/>
+  <user username="hareesh" password="hari2311" roles="manager-gui,admin-gui,manager-script"/>
+
+
