@@ -74,3 +74,83 @@ NOTE: by default every user has admin access , How to give read access to develo
 NOTE: add all users and give the permissions, check the activities.
 
 NOTE: pls give job level acces to users.
+
+---------------------------------------
+How to create Groups on Jenkins GUI?
+✅ Step 1 — Install Role-Based Authorization Plugin
+
+Go to Manage Jenkins
+
+Click Manage Plugins
+
+Go to Available
+
+Search:
+
+Role-based Authorization Strategy
+
+Install it
+
+Restart Jenkins (Safe Restart)
+
+✅ Step 2 — Enable Role-Based Security
+
+Go to Manage Jenkins
+
+Click Configure Global Security
+
+Under Authorization, select:
+
+Role-Based Strategy
+
+Click Save
+
+✅ Step 3 — Create Roles (Groups)
+
+Go to Manage Jenkins
+
+Click:
+
+Manage and Assign Roles
+
+Now you will see:
+
+Manage Roles
+
+Assign Roles
+
+✅ Step 4 — Create a New Group (Role)
+
+Click Manage Roles
+
+You will see:
+
+Global roles
+
+Item roles
+
+Example: Create Developer Group
+
+Under Global roles, add:
+
+Role	Permissions
+developer	Read, Build
+
+Under Item roles, add:
+
+Role	Pattern	Permissions
+dev-job	Jio-.*	Build, Read
+
+Click Save
+
+✅ Step 5 — Assign Users to Group
+
+Click Assign Roles
+
+Enter username
+
+Tick the role you created
+
+Click Save
+
+Now that user belongs to that group.
